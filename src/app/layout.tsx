@@ -15,8 +15,8 @@ export default function RootLayout({
   return (
     <html lang="en" className="font-sans">
       <body className="min-h-full flex justify-center items-center bg-gradient-to-br from-rose-950 to to-slate-950">
-        <div className="border-2 max-w-3xl w-full min-h-[45rem] flex flex-row rounded-lg dark:bg-black/30 bg-white/40 p-4">
-          <div className="w-1/3 border-r-2 pr-3">
+        <div className="border-2 max-w-3xl w-full min-h-[45rem] flex flex-row rounded-lg dark:bg-black/30 bg-white/40">
+          <div className="w-1/3 border-r-2 p-4">
             <Link href="/about-me">
               <h1 className="font-bold">Nathan Newberry</h1>
             </Link>
@@ -49,7 +49,7 @@ export default function RootLayout({
               </li>
             </ul>
           </div>
-          <div className="w-2/3 pl-3">{children}</div>
+          <div className="w-2/3 p-4">{children}</div>
         </div>
       </body>
     </html>
