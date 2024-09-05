@@ -32,6 +32,10 @@ h2 {
   font-size: 1.5rem;
 }
 
+h3 {
+  font-size: 1.3rem;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;

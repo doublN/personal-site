@@ -21,9 +21,31 @@ export default function RootLayout({
               <h1 className="font-bold">Nathan Newberry</h1>
             </Link>
             <h2>Software Developer</h2>
-            <ul>
+            <ul className="mt-4">
               <li>
-                <Link href="/about-me">About Me</Link>
+                <Link href="/about-me">
+                  <h3>About Me</h3>
+                </Link>
+              </li>
+              <li className="pt-3">
+                <Link href="/about-me">
+                  <h3>Professional Projects</h3>
+                </Link>
+              </li>
+              <li className="pt-3">
+                <Link href="/about-me">
+                  <h3>Personal Projects</h3>
+                </Link>
+              </li>
+              <li className="pt-3">
+                <Link href="/about-me">
+                  <h3>Front End Work</h3>
+                </Link>
+              </li>
+              <li className="pt-3">
+                <Link href="/about-me">
+                  <h3>Back End Work</h3>
+                </Link>
               </li>
             </ul>
           </div>
