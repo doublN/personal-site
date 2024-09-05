@@ -20,7 +20,7 @@ export default function RootLayout({
             <Link href="/about-me">
               <h1 className="font-bold">Nathan Newberry</h1>
             </Link>
-            <h2>Software Developer</h2>
+            <h2 className="font-semibold">Software Developer</h2>
             <ul className="mt-4">
               <li>
                 <Link href="/about-me">
