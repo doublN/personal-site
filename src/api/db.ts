@@ -12,12 +12,16 @@ export type Article = {
   link: {
     icon: string;
     url: string;
-  };
+  } | null;
 };
 
-const client = createClient({
-  url: "file:db/personal.db",
-});
+const client = createClient(
+  process.env.NODE_ENV === "development"
+    ? {
+        url: process.env.DB_CONNECTION ?? "",
+      }
+    : { url: "" }
+);
 
 export const getArticles = async (
   tags: Array<string>
@@ -44,4 +48,10 @@ export const getArticles = async (
 
     return entry;
   });
+};
+
+export const getAbout = async (): Promise<Article> => {
+  const article = await getArticles(["about"]);
+
+  return article[0];
 };
