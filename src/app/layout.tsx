@@ -14,9 +14,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="font-sans">
-      <body className="min-h-full flex justify-center items-center bg-gradient-to-br from-rose-950 to to-slate-950">
-        <div className="border-2 max-w-3xl w-full min-h-[45rem] flex flex-row rounded-lg dark:bg-black/30 bg-white/40">
-          <div className="w-1/3 border-r-2 p-4">
+      <body className="min-h-full flex justify-center items-center bg-gradient-to-br dark:from-rose-950 to dark:to-slate-950 from-rose-950 to-slate-400">
+        <div className="border-2 dark:border-white border-black max-w-3xl w-full min-h-[45rem] flex flex-row rounded-lg dark:bg-black/30 bg-white/40 shadow-lg">
+          <div className="w-1/3 border-r-2 dark:border-white border-black p-4">
             <Link href="/about-me">
               <h1 className="font-bold">Nathan Newberry</h1>
             </Link>
