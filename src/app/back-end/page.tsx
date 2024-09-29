@@ -1,5 +1,5 @@
 import { ContentBlock } from "@/components/ContentBlock";
 
 export default function Page() {
-  return <ContentBlock tags={["back-end"]} />;
+  return <ContentBlock tags={["backend"]} />;
 }

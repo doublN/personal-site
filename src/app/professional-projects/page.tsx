@@ -1,5 +1,5 @@
 import { ContentBlock } from "@/components/ContentBlock";
 
 export default function Page() {
-  return <ContentBlock tags={["shift"]} />;
+  return <ContentBlock tags={["professional"]} />;
 }
