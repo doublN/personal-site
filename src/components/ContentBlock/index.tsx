@@ -17,7 +17,16 @@ export function ContentBlock(props: Props) {
   }, [props.tags]);
 
   return (
-    <main>
+    <section
+      className="
+      overflow-y-auto
+      h-full
+      scrollbar-gutter-auto
+      scrollbar-thin
+      scrollbar-color
+      scrollbar-track-rose-950
+      scrollbar-thumb-rose-300"
+    >
       {content === null ? (
         <p>...Loading</p>
       ) : (
@@ -26,12 +35,14 @@ export function ContentBlock(props: Props) {
             <div key={article.header}>
               <h1>{article.header}</h1>
               {article.paragraphs.p.map((paragraph) => (
-                <p key={paragraph}>{paragraph}</p>
+                <p key={paragraph} className="mb-2 mt-2">
+                  {paragraph}
+                </p>
               ))}
             </div>
           ))}
         </div>
       )}
-    </main>
+    </section>
   );
 }

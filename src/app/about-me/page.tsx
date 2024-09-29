@@ -1,29 +1,7 @@
 "use client";
 
-import { Article, getAbout } from "@/api/db";
-import { useEffect, useState } from "react";
-
 export default function Home() {
-  const [content, setContent] = useState<Article | null>(null);
-
-  useEffect(() => {
-    getAbout().then((article) => {
-      setContent(article);
-    });
-  }, []);
-
   return (
-    <main>
-      {content === null ? (
-        <p>...Loading</p>
-      ) : (
-        <div>
-          <h1>{content.header}</h1>
-          {content.paragraphs.p.map((paragraph) => (
-            <p key={paragraph}>{paragraph}</p>
-          ))}
-        </div>
-      )}
-    </main>
+    <section className="overflow-y-auto h-full scrollbar-gutter-auto scrollbar-thin scrollbar-color scrollbar-track-rose-950 scrollbar-thumb-rose-300"></section>
   );
 }

@@ -47,9 +47,3 @@ export const getArticles = async (
     return entry;
   });
 };
-
-export const getAbout = async (): Promise<Article> => {
-  const article = await getArticles(["about"]);
-
-  return article[0];
-};

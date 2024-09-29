@@ -15,7 +15,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="font-sans fadeIn">
       <body className="min-h-full flex justify-center items-center bg-gradient-to-br dark:from-rose-950 to dark:to-slate-950 from-rose-300 to-slate-400">
-        <div className="border-2 dark:border-white border-black w-[75%] min-h-[45rem] flex flex-row rounded-lg dark:bg-black/30 bg-white/40 shadow-lg">
+        <div className="border-2 dark:border-white border-black w-[75%] h-[45rem] flex flex-row rounded-lg dark:bg-black/30 bg-white/40 shadow-lg">
           <div className="w-1/3 border-r-2 dark:border-white border-black p-4">
             <Link href="/about-me">
               <h1 className="font-bold">Nathan Newberry</h1>
@@ -39,7 +39,7 @@ export default function RootLayout({
               </Link>
             </nav>
           </div>
-          <div className="w-2/3 p-4">{children}</div>
+          <main className="w-2/3 p-4 h-full">{children}</main>
         </div>
       </body>
     </html>

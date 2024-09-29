@@ -1,3 +1,8 @@
+import {
+  scrollbarColor,
+  scrollbarGutter,
+  scrollbarWidth,
+} from "tailwind-scrollbar-utilities";
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -9,6 +14,6 @@ const config: Config = {
   theme: {
     extend: {},
   },
-  plugins: [],
+  plugins: [scrollbarGutter(), scrollbarWidth(), scrollbarColor()],
 };
 export default config;
