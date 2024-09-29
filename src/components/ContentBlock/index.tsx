@@ -2,6 +2,8 @@
 
 import { Article, getArticles } from "@/api/db";
 import { useEffect, useState } from "react";
+import { Accordion } from "../Accordion";
+import { TechItem } from "../TechItem";
 
 type Props = {
   readonly tags: Array<string>;
@@ -32,14 +34,25 @@ export function ContentBlock(props: Props) {
       ) : (
         <div>
           {content.map((article) => (
-            <div key={article.header}>
-              <h1>{article.header}</h1>
+            <Accordion
+              key={article.header}
+              header={
+                <div>
+                  <h2 className="text-left mb-1">{article.header}</h2>
+                  <div className="flex gap-4">
+                    {article.tech.map((value) => (
+                      <TechItem key={value} text={value} />
+                    ))}
+                  </div>
+                </div>
+              }
+            >
               {article.paragraphs.p.map((paragraph) => (
                 <p key={paragraph} className="mb-2 mt-2">
                   {paragraph}
                 </p>
               ))}
-            </div>
+            </Accordion>
           ))}
         </div>
       )}
