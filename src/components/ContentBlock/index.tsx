@@ -32,7 +32,7 @@ export function ContentBlock(props: Props) {
       {content === null ? (
         <p>...Loading</p>
       ) : (
-        <div>
+        <div className="flex flex-col gap-2">
           {content.map((article) => (
             <Accordion
               key={article.header}
