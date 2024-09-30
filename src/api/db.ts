@@ -34,7 +34,7 @@ export const getArticles = async (
   });
 
   const results = await client.execute(
-    `SELECT header, paragraphs, link, tech FROM articles WHERE ${where} ORDER BY date`
+    `SELECT header, paragraphs, link, tech FROM articles WHERE ${where} ORDER BY date DESC`
   );
   const rows = results.rows;
 
