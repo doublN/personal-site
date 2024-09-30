@@ -4,13 +4,11 @@ import { createClient } from "@libsql/client";
 
 export type Article = {
   header: string;
-  paragraphs: {
-    p: Array<string>;
-  };
-  link: {
+  paragraphs: Array<string>;
+  links: Array<{
     icon: string;
     url: string;
-  } | null;
+  }> | null;
   tech: Array<string>;
 };
 
@@ -34,7 +32,7 @@ export const getArticles = async (
   });
 
   const results = await client.execute(
-    `SELECT header, paragraphs, link, tech FROM articles WHERE ${where} ORDER BY date DESC`
+    `SELECT header, paragraphs, links, tech FROM articles WHERE ${where} ORDER BY date DESC`
   );
   const rows = results.rows;
 
@@ -42,8 +40,13 @@ export const getArticles = async (
     const entry: Article = <Article>{};
 
     entry.header = row.header as string;
-    entry.paragraphs = JSON.parse(row.paragraphs as string);
-    entry.link = JSON.parse(row.link as string);
+    entry.paragraphs = JSON.parse(row.paragraphs as string).p;
+
+    if (row.links === null) {
+      entry.links = null;
+    } else {
+      entry.links = JSON.parse(row.links as string).l;
+    }
 
     if (typeof row.tech === "string") {
       entry.tech = row.tech.split(" ");
