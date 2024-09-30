@@ -21,7 +21,15 @@ export function Accordion(props: Props) {
         {props.header}
         <div>{isOpen ? "^" : "v"}</div>
       </button>
-      {isOpen && <div>{props.children}</div>}
+      {
+        <div
+          className={`${
+            isOpen ? "h-[350px] overflow-y-auto" : "h-0"
+          } overflow-hidden transition-all scrollbar-thin scrollbar-color scrollbar-track-rose-950 scrollbar-thumb-rose-300`}
+        >
+          {props.children}
+        </div>
+      }
     </div>
   );
 }
