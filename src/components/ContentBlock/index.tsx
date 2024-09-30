@@ -47,7 +47,7 @@ export function ContentBlock(props: Props) {
                 </div>
               }
             >
-              {article.paragraphs.p.map((paragraph) => (
+              {article.paragraphs.map((paragraph) => (
                 <p key={paragraph} className="mb-2 mt-2">
                   {paragraph}
                 </p>
