@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Link from "next/link";
+import { Icon } from "@/components/Icon/Icon";
 
 export const metadata: Metadata = {
   title: "Nathan Newberry",
@@ -20,7 +21,12 @@ export default function RootLayout({
             <Link href="/about-me">
               <h1 className="font-bold">Nathan Newberry</h1>
             </Link>
-            <h2 className="font-semibold">Software Developer</h2>
+            <div className="flex flex-row items-center gap-4">
+              <h2 className="font-semibold">Software Developer </h2>
+              <a href="https://github.com/doublN" target="_blank">
+                <Icon name="github" size="small" />
+              </a>
+            </div>
             <nav className="mt-4 flex flex-col gap-4">
               <Link href="/about-me">
                 <h3>About Me 👋</h3>
