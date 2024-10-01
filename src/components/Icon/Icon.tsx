@@ -1,7 +1,8 @@
 import { FunctionComponent } from "react";
 import { DownArrow } from "./svg/DownArrow";
+import { GitHub } from "./svg/Github";
 
-export type IconName = "downArrow";
+export type IconName = "downArrow" | "github";
 
 export type IconSize = "small" | "medium" | "large";
 
@@ -10,7 +11,10 @@ type Props = {
   readonly size: IconSize;
 };
 
-const icons = new Map<IconName, FunctionComponent>([["downArrow", DownArrow]]);
+const icons = new Map<IconName, FunctionComponent>([
+  ["downArrow", DownArrow],
+  ["github", GitHub],
+]);
 
 export function Icon(props: Props) {
   const IconComponent = icons.get(props.name) ?? DownArrow;
