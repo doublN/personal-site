@@ -23,23 +23,25 @@ export default function RootLayout({
             <h2 className="font-semibold">Software Developer</h2>
             <nav className="mt-4 flex flex-col gap-4">
               <Link href="/about-me">
-                <h3>About Me</h3>
+                <h3>About Me 👋</h3>
               </Link>
               <Link href="/professional-projects">
-                <h3>Professional Projects</h3>
+                <h3>Professional Projects 🐱‍💻</h3>
               </Link>
               <Link href="/personal-projects">
-                <h3>Personal Projects</h3>
+                <h3>Personal Projects 💻</h3>
               </Link>
               <Link href="/front-end">
-                <h3>Front End Work</h3>
+                <h3>Front End Work 🖼</h3>
               </Link>
               <Link href="/back-end">
-                <h3>Back End Work</h3>
+                <h3>Back End Work 📊</h3>
               </Link>
             </nav>
           </div>
-          <main className="w-2/3 p-4 h-full">{children}</main>
+          <main className="w-2/3 p-4 h-full overflow-auto scrollbar-thin scrollbar-color scrollbar-track-gray-200 scrollbar-thumb-slate-500 dark:scrollbar-track-rose-950 dark:scrollbar-thumb-rose-300">
+            {children}
+          </main>
         </div>
       </body>
     </html>
