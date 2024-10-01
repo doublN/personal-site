@@ -6,7 +6,7 @@ export type Article = {
   header: string;
   paragraphs: Array<string>;
   links: Array<{
-    icon: string;
+    icon: "github" | "link";
     url: string;
   }> | null;
   tech: Array<string>;
