@@ -1,4 +1,5 @@
 import { ReactNode, useState } from "react";
+import { Icon } from "../Icon/Icon";
 
 type Props = {
   readonly header: ReactNode;
@@ -19,7 +20,9 @@ export function Accordion(props: Props) {
         className="w-full flex items-center justify-between "
       >
         {props.header}
-        <div>{isOpen ? "^" : "v"}</div>
+        <div className={`${isOpen ? "rotate-180" : "rotate-0"} transition-all`}>
+          <Icon name="downArrow" size="medium" />
+        </div>
       </button>
       {
         <div
