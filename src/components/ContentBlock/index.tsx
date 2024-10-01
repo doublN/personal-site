@@ -4,6 +4,7 @@ import { Article, getArticles } from "@/api/db";
 import { useEffect, useState } from "react";
 import { Accordion } from "../Accordion";
 import { TechItem } from "../TechItem";
+import { Icon } from "../Icon/Icon";
 
 type Props = {
   readonly tags: Array<string>;
@@ -38,7 +39,23 @@ export function ContentBlock(props: Props) {
               key={article.header}
               header={
                 <div>
-                  <h2 className="text-left mb-1">{article.header}</h2>
+                  <div className="flex flex-row gap-5 items-center mb-2">
+                    <h2 className="text-left mb-1">{article.header}</h2>
+                    {article.links
+                      ? article.links.map((link) => (
+                          <a
+                            key={link.url}
+                            href={link.url}
+                            target="_blank"
+                            onClick={(event) => {
+                              event.stopPropagation();
+                            }}
+                          >
+                            <Icon name={link.icon} size="small" />
+                          </a>
+                        ))
+                      : null}
+                  </div>
                   <div className="flex gap-4">
                     {article.tech.map((value) => (
                       <TechItem key={value} text={value} />
