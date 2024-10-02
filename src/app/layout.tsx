@@ -28,19 +28,34 @@ export default function RootLayout({
               </a>
             </div>
             <nav className="mt-4 flex flex-col gap-4">
-              <Link href="/about-me">
+              <Link
+                className="dark:hover:bg-rose-800 hover:bg-gray-200 pl-3 pt-2 pb-2 rounded-full"
+                href="/about-me"
+              >
                 <h3>About Me 👋</h3>
               </Link>
-              <Link href="/professional-projects">
+              <Link
+                href="/professional-projects"
+                className="dark:hover:bg-rose-800 hover:bg-gray-200 pl-3 pt-2 pb-2 rounded-full"
+              >
                 <h3>Professional Projects 🐱‍💻</h3>
               </Link>
-              <Link href="/personal-projects">
+              <Link
+                href="/personal-projects"
+                className="dark:hover:bg-rose-800 hover:bg-gray-200 pl-3 pt-2 pb-2 rounded-full"
+              >
                 <h3>Personal Projects 💻</h3>
               </Link>
-              <Link href="/front-end">
+              <Link
+                href="/front-end"
+                className="dark:hover:bg-rose-800 hover:bg-gray-200 pl-3 pt-2 pb-2 rounded-full"
+              >
                 <h3>Front End Work 🖼</h3>
               </Link>
-              <Link href="/back-end">
+              <Link
+                href="/back-end"
+                className="dark:hover:bg-rose-800 hover:bg-gray-200 pl-3 pt-2 pb-2 rounded-full"
+              >
                 <h3>Back End Work 📊</h3>
               </Link>
             </nav>
