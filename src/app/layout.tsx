@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Link from "next/link";
 import { Icon } from "@/components/Icon/Icon";
+import { ArticleSearch } from "@/components/ArticleSearch";
 
 export const metadata: Metadata = {
   title: "Nathan Newberry",
@@ -26,6 +27,9 @@ export default function RootLayout({
               <a href="https://github.com/doublN" target="_blank">
                 <Icon name="github" size="small" />
               </a>
+            </div>
+            <div className="mt-4">
+              <ArticleSearch />
             </div>
             <nav className="mt-4 flex flex-col gap-4">
               <Link
