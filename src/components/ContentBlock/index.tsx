@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { Accordion } from "../Accordion";
 import { TechItem } from "../TechItem";
 import { Icon } from "../Icon/Icon";
+import { useGetArticles } from "@/hooks/useGetArticles";
 
 type Props = {
   readonly tags: Array<string>;
@@ -19,22 +20,21 @@ export function ContentBlock(props: Props) {
     });
   }, [props.tags]);
 
-  return (
-    <section
-      className="
-      overflow-y-auto
-      h-full
-      scrollbar-gutter-auto
-      scrollbar-thin
-      scrollbar-color
-      scrollbar-track-rose-950
-      scrollbar-thumb-rose-300"
-    >
-      {content === null ? (
-        <p>...Loading</p>
-      ) : (
+  const { articles, isLoading } = useGetArticles(props.tags);
+
+  const render = () => {
+    if (isLoading) {
+      return <p>...loading</p>;
+    }
+
+    if (isLoading === false && (articles === null || articles.length === 0)) {
+      return <p>Cannot find!</p>;
+    }
+
+    if (articles !== null) {
+      return (
         <div className="flex flex-col gap-2">
-          {content.map((article) => (
+          {articles.map((article) => (
             <Accordion
               key={article.header}
               header={
@@ -72,7 +72,22 @@ export function ContentBlock(props: Props) {
             </Accordion>
           ))}
         </div>
-      )}
+      );
+    }
+  };
+
+  return (
+    <section
+      className="
+      overflow-y-auto
+      h-full
+      scrollbar-gutter-auto
+      scrollbar-thin
+      scrollbar-color
+      scrollbar-track-rose-950
+      scrollbar-thumb-rose-300"
+    >
+      {render()}
     </section>
   );
 }
