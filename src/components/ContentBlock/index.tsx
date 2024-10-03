@@ -24,11 +24,16 @@ export function ContentBlock(props: Props) {
 
   const render = () => {
     if (isLoading) {
-      return <p>...loading</p>;
+      return <p className="text-center">...loading</p>;
     }
 
     if (isLoading === false && (articles === null || articles.length === 0)) {
-      return <p>Cannot find!</p>;
+      return (
+        <p className="text-center">
+          Oops! Cannot find anything ⚠ Try selecting an option or searching
+          something else to get back on track 🚆
+        </p>
+      );
     }
 
     if (articles !== null) {
