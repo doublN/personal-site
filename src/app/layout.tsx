@@ -64,7 +64,7 @@ export default function RootLayout({
               </Link>
             </nav>
           </div>
-          <main className="w-2/3 p-4 h-full overflow-auto scrollbar-thin scrollbar-color scrollbar-track-gray-200 scrollbar-thumb-slate-500 dark:scrollbar-track-rose-950 dark:scrollbar-thumb-rose-300">
+          <main className="w-screen sm:w-2/3 p-4 h-full overflow-auto scrollbar-thin scrollbar-color scrollbar-track-gray-200 scrollbar-thumb-slate-500 dark:scrollbar-track-rose-950 dark:scrollbar-thumb-rose-300">
             {children}
           </main>
         </div>
