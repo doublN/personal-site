@@ -16,8 +16,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="font-sans fadeIn">
-      <body className="min-h-full flex justify-center items-center bg-gradient-to-br dark:from-rose-950 to dark:to-slate-950 from-rose-300 to-slate-400">
-        <div className="sm:border-2 dark:border-white border-black lg:w-[75%] w-full sm:h-[45rem] flex flex-col sm:flex-row rounded-lg dark:bg-black/30 bg-white/40 shadow-lg">
+      <body className="h-full sm:flex justify-center items-center bg-gradient-to-br dark:from-rose-950 to dark:to-slate-950 from-rose-300 to-slate-400">
+        <div className="sm:border-2 dark:border-white border-black lg:w-[75%] w-full h-full sm:h-[45rem] flex flex-col sm:flex-row rounded-lg dark:bg-black/30 bg-white/40 shadow-lg">
           <div className="sm:w-1/3 border-b-2 sm:border-r-2 dark:border-white border-black p-4 md:overflow-y-auto scrollbar-thin scrollbar-color scrollbar-track-gray-200 scrollbar-thumb-slate-500 dark:scrollbar-track-rose-950 dark:scrollbar-thumb-rose-300">
             <Link href="/about-me">
               <h1 className="font-bold">Nathan Newberry</h1>
