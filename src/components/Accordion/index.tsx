@@ -17,7 +17,7 @@ export function Accordion(props: Props) {
     <div className="w-full p-3 rounded-md bg-gray-200 dark:bg-rose-950 transition-all">
       <button
         onClick={handleHeaderClick}
-        className="w-full flex items-center justify-between "
+        className="w-full flex items-center justify-between"
       >
         {props.header}
         <div className={`${isOpen ? "rotate-180" : "rotate-0"} transition-all`}>

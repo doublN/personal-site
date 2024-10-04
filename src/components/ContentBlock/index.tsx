@@ -1,25 +1,16 @@
 "use client";
 
-import { Article, getArticles } from "@/api/db";
-import { useEffect, useState } from "react";
 import { Accordion } from "../Accordion";
 import { TechItem } from "../TechItem";
 import { Icon } from "../Icon/Icon";
 import { useGetArticles } from "@/hooks/useGetArticles";
+import { ArticleHeader } from "../ArticleHeader";
 
 type Props = {
   readonly tags: Array<string>;
 };
 
 export function ContentBlock(props: Props) {
-  const [content, setContent] = useState<Array<Article> | null>(null);
-
-  useEffect(() => {
-    getArticles(props.tags).then((articles) => {
-      setContent(articles);
-    });
-  }, [props.tags]);
-
   const { articles, isLoading } = useGetArticles(props.tags);
 
   const render = () => {
@@ -43,30 +34,11 @@ export function ContentBlock(props: Props) {
             <Accordion
               key={article.header}
               header={
-                <div>
-                  <div className="flex flex-row gap-5 items-center mb-2">
-                    <h2 className="text-left mb-1">{article.header}</h2>
-                    {article.links
-                      ? article.links.map((link) => (
-                          <a
-                            key={link.url}
-                            href={link.url}
-                            target="_blank"
-                            onClick={(event) => {
-                              event.stopPropagation();
-                            }}
-                          >
-                            <Icon name={link.icon} size="small" />
-                          </a>
-                        ))
-                      : null}
-                  </div>
-                  <div className="flex gap-4">
-                    {article.tech.map((value) => (
-                      <TechItem key={value} text={value} />
-                    ))}
-                  </div>
-                </div>
+                <ArticleHeader
+                  text={article.header}
+                  links={article.links}
+                  tech={article.tech}
+                />
               }
             >
               {article.paragraphs.map((paragraph) => (

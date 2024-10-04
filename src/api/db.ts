@@ -5,11 +5,13 @@ import { createClient } from "@libsql/client";
 export type Article = {
   header: string;
   paragraphs: Array<string>;
-  links: Array<{
-    icon: "github" | "link";
-    url: string;
-  }> | null;
+  links: Array<ArticleLink> | null;
   tech: Array<string>;
+};
+
+export type ArticleLink = {
+  icon: "github" | "link";
+  url: string;
 };
 
 const client = createClient(
