@@ -17,8 +17,8 @@ export default function RootLayout({
   return (
     <html lang="en" className="font-sans fadeIn">
       <body className="min-h-full flex justify-center items-center bg-gradient-to-br dark:from-rose-950 to dark:to-slate-950 from-rose-300 to-slate-400">
-        <div className="border-2 dark:border-white border-black w-[75%] h-[45rem] flex flex-row rounded-lg dark:bg-black/30 bg-white/40 shadow-lg">
-          <div className="w-1/3 border-r-2 dark:border-white border-black p-4">
+        <div className="sm:border-2 dark:border-white border-black lg:w-[75%] w-full sm:h-[45rem] flex flex-col sm:flex-row rounded-lg dark:bg-black/30 bg-white/40 shadow-lg">
+          <div className="sm:w-1/3 border-b-2 sm:border-r-2 dark:border-white border-black p-4 md:overflow-y-auto scrollbar-thin scrollbar-color scrollbar-track-gray-200 scrollbar-thumb-slate-500 dark:scrollbar-track-rose-950 dark:scrollbar-thumb-rose-300">
             <Link href="/about-me">
               <h1 className="font-bold">Nathan Newberry</h1>
             </Link>
@@ -31,34 +31,34 @@ export default function RootLayout({
             <div className="mt-4">
               <ArticleSearch />
             </div>
-            <nav className="mt-4 flex flex-col gap-4">
+            <nav className="mt-4 flex flex-row sm:flex-col gap-4 overflow-x-auto">
               <Link
-                className="dark:hover:bg-rose-800 hover:bg-gray-200 pl-3 pt-2 pb-2 rounded-full"
+                className="dark:hover:bg-rose-800 hover:bg-gray-200 pl-3 pt-2 pb-2 rounded-full text-nowrap sm:text-wrap"
                 href="/about-me"
               >
                 <h3>About Me 👋</h3>
               </Link>
               <Link
                 href="/professional-projects"
-                className="dark:hover:bg-rose-800 hover:bg-gray-200 pl-3 pt-2 pb-2 rounded-full"
+                className="dark:hover:bg-rose-800 hover:bg-gray-200 pl-3 pt-2 pb-2 rounded-full text-nowrap sm:text-wrap"
               >
                 <h3>Professional Projects 🐱‍💻</h3>
               </Link>
               <Link
                 href="/personal-projects"
-                className="dark:hover:bg-rose-800 hover:bg-gray-200 pl-3 pt-2 pb-2 rounded-full"
+                className="dark:hover:bg-rose-800 hover:bg-gray-200 pl-3 pt-2 pb-2 rounded-full text-nowrap sm:text-wrap"
               >
                 <h3>Personal Projects 💻</h3>
               </Link>
               <Link
                 href="/front-end"
-                className="dark:hover:bg-rose-800 hover:bg-gray-200 pl-3 pt-2 pb-2 rounded-full"
+                className="dark:hover:bg-rose-800 hover:bg-gray-200 pl-3 pt-2 pb-2 rounded-full text-nowrap sm:text-wrap"
               >
                 <h3>Front End Work 🖼</h3>
               </Link>
               <Link
                 href="/back-end"
-                className="dark:hover:bg-rose-800 hover:bg-gray-200 pl-3 pt-2 pb-2 rounded-full"
+                className="dark:hover:bg-rose-800 hover:bg-gray-200 pl-3 pt-2 pb-2 rounded-full text-nowrap sm:text-wrap"
               >
                 <h3>Back End Work 📊</h3>
               </Link>
