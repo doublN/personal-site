@@ -23,7 +23,7 @@ export default function RootLayout({
               <h1 className="font-bold">Nathan Newberry</h1>
             </Link>
             <div className="flex flex-row items-center gap-4">
-              <h2 className="font-semibold">Software Developer </h2>
+              <h2 className="font-semibold">Software Developer</h2>
               <a href="https://github.com/doublN" target="_blank">
                 <Icon name="github" size="small" />
               </a>
