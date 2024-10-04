@@ -2,7 +2,7 @@ import { ReactNode } from "react";
 
 export function GitHub(): ReactNode {
   return (
-    <svg viewBox="0 0 100 100">
+    <svg viewBox="-2 -2 100 100">
       <path
         fillRule="evenodd"
         clipRule="evenodd"
