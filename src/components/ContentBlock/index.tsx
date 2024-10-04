@@ -1,8 +1,6 @@
 "use client";
 
 import { Accordion } from "../Accordion";
-import { TechItem } from "../TechItem";
-import { Icon } from "../Icon/Icon";
 import { useGetArticles } from "@/hooks/useGetArticles";
 import { ArticleHeader } from "../ArticleHeader";
 
