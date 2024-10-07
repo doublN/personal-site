@@ -3,8 +3,9 @@ import { DownArrow } from "./svg/DownArrow";
 import { GitHub } from "./svg/Github";
 import { LinkChain } from "./svg/LinkChain";
 import { Search } from "./svg/search";
+import { LinkedIn } from "./svg/LinkedIn";
 
-export type IconName = "downArrow" | "github" | "link" | "search";
+export type IconName = "downArrow" | "github" | "link" | "search" | "linkedIn";
 
 export type IconSize = "small" | "medium" | "large";
 
@@ -18,6 +19,7 @@ const icons = new Map<IconName, FunctionComponent>([
   ["github", GitHub],
   ["link", LinkChain],
   ["search", Search],
+  ["linkedIn", LinkedIn],
 ]);
 
 export function Icon(props: Props) {

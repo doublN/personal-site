@@ -27,6 +27,9 @@ export default function RootLayout({
               <a href="https://github.com/doublN" target="_blank">
                 <Icon name="github" size="small" />
               </a>
+              <a href="https://www.linkedin.com/in/nnewberry/" target="_blank">
+                <Icon name="linkedIn" size="small" />
+              </a>
             </div>
             <div className="mt-4">
               <ArticleSearch />
