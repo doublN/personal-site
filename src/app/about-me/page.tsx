@@ -8,22 +8,24 @@ export default function Home() {
       <h2>Hi, I'm Nathan, a software developer from Plymouth 👋</h2>
       <p className="mt-2 bt-2">
         I started as an apprentice in 2022 where I participated in a 13 week
-        bootcamp learning:{" "}
-        <span className="inline-flex gap-2 m-2">
-          <TechItem text="HTML" /> <TechItem text="CSS" />{" "}
-          <TechItem text="JavaScript" /> <TechItem text="React" />{" "}
-          <TechItem text="SQL" /> <TechItem text="JEST" />
-        </span>
+        bootcamp learning:
       </p>
+      <div className="inline-flex gap-2 m-2">
+        <TechItem text="HTML" /> <TechItem text="CSS" />{" "}
+        <TechItem text="JavaScript" /> <TechItem text="React" />{" "}
+        <TechItem text="SQL" /> <TechItem text="JEST" />
+      </div>
       <p className="mt-2 bt-2">
         After completion I joined the workplace working across multiple
-        projects, picking up technologies such as:{" "}
+        projects, picking up technologies such as:
+      </p>
+      <div>
         <span className="inline-flex gap-2 m-2">
           <TechItem text="Redux" /> <TechItem text="MaterialUI" />{" "}
           <TechItem text="Cypress" /> <TechItem text="PHP" />{" "}
-          <TechItem text="Laravel" />
+          <TechItem text="Laravel" /> <TechItem text="MongoDB" />
         </span>
-      </p>
+      </div>
       <p className="mt-2 bt-2">
         Over time I have become confident working on front end and back end
         tasks, including taking ownership over full features and contributing to
