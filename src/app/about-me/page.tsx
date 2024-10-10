@@ -39,6 +39,10 @@ export default function Home() {
         I am currently seeking new challenges and opportunities in a junior-mid
         level position 🐱‍💻.
       </p>
+      <p className="mt-2 bt-2">
+        While I am based in Plymouth, I am also open to relocating for
+        hybrid/on-site roles as well as local and remote.
+      </p>
       <section className="mt-3">
         <h2>Recommendations</h2>
         <p>
