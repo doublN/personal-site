@@ -5,7 +5,7 @@ import { TechItem } from "@/components/TechItem";
 export default function Home() {
   return (
     <section className="overflow-y-auto h-full scrollbar-gutter-auto scrollbar-thin scrollbar-color scrollbar-track-rose-950 scrollbar-thumb-rose-300">
-      <h2>Hi, I'm Nathan, a software developer from Plymouth 👋</h2>
+      <h2>Hi, I&apos;m Nathan, a software developer from Plymouth 👋</h2>
       <p className="mt-2 bt-2">
         I started as an apprentice in 2022 where I participated in a 13 week
         bootcamp learning:
@@ -54,13 +54,13 @@ export default function Home() {
             Nathan combines the incredible ability of intuitive frontend
             development and speedy API creation. Ever the maintainer of high
             contribution standards, Nathan has progressed and improved at an
-            accelerated rate. It's not just Nathan's technical skills that make
-            him such a valued member of any team he joins, nor his capability to
-            adapt and learn quickly, but the addition of great communication and
-            fearlessness ensures that Nathan takes success with him wherever he
-            goes. It was a pleasure to mentor and guide Nathan on his way to
-            becoming the well rounded developer that he is today. All the best
-            and good luck!
+            accelerated rate. It&apos;s not just Nathan&apos;s technical skills
+            that make him such a valued member of any team he joins, nor his
+            capability to adapt and learn quickly, but the addition of great
+            communication and fearlessness ensures that Nathan takes success
+            with him wherever he goes. It was a pleasure to mentor and guide
+            Nathan on his way to becoming the well rounded developer that he is
+            today. All the best and good luck!
           </em>
           <a
             href="https://www.linkedin.com/in/benjamin-payne-hunt/"
