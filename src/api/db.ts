@@ -19,7 +19,10 @@ const client = createClient(
     ? {
         url: process.env.DB_CONNECTION ?? "",
       }
-    : { url: "" }
+    : {
+        url: process.env.TURSO_DATABASE_URL ?? "",
+        authToken: process.env.TURSO_AUTH_TOKEN,
+      }
 );
 
 export const getArticles = async (
