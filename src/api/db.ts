@@ -30,15 +30,17 @@ export const getArticles = async (
 ): Promise<Array<Article>> => {
   const where = tags.map((tag, index) => {
     if (index === 0) {
-      return `tags LIKE '%${tag}%' `;
+      return `tags LIKE '%'||?||'%' `;
     } else {
-      return `OR tags LIKE '%${tag}%' `;
+      return `OR tags LIKE '%'||?||'%' `;
     }
   });
 
-  const results = await client.execute(
-    `SELECT header, paragraphs, links, tech FROM articles WHERE ${where} ORDER BY date DESC`
-  );
+  const results = await client.execute({
+    sql: `SELECT header, paragraphs, links, tech FROM articles WHERE ${where} ORDER BY date DESC`,
+    args: tags,
+  });
+
   const rows = results.rows;
 
   return rows.map((row): Article => {
