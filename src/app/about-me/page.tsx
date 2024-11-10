@@ -37,7 +37,7 @@ export default function Home() {
       </p>
       <p className="mt-2 bt-2">
         I am currently seeking new challenges and opportunities in a junior-mid
-        level position 🐱‍💻.
+        level position.
       </p>
       <p className="mt-2 bt-2">
         While I am based in Plymouth, I am also open to relocating for

@@ -45,7 +45,7 @@ export default function RootLayout({
                 href="/professional-projects"
                 className="dark:hover:bg-rose-800 hover:bg-gray-200 pl-3 pt-2 pb-2 rounded-full text-nowrap sm:text-wrap"
               >
-                <h3>Professional Projects 🐱‍💻</h3>
+                <h3>Professional Projects 🏢</h3>
               </Link>
               <Link
                 href="/personal-projects"
