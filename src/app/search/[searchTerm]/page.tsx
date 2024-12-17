@@ -7,5 +7,5 @@ type Props = {
 };
 
 export default function Page(props: Props) {
-  return <ContentBlock tags={[props.params.searchTerm]} />;
+  return <ContentBlock tags={props.params.searchTerm.split("%20")} />;
 }

@@ -28,13 +28,15 @@ const client = createClient(
 export const getArticles = async (
   tags: Array<string>
 ): Promise<Array<Article>> => {
-  const where = tags.map((tag, index) => {
-    if (index === 0) {
-      return `tags LIKE '%'||?||'%' `;
-    } else {
-      return `OR tags LIKE '%'||?||'%' `;
-    }
-  });
+  const where = tags
+    .map((tag, index) => {
+      if (index === 0) {
+        return `tags LIKE '%'||?||'%' `;
+      } else {
+        return `OR tags LIKE '%'||?||'%' `;
+      }
+    })
+    .join("");
 
   const results = await client.execute({
     sql: `SELECT header, paragraphs, links, tech FROM articles WHERE ${where} ORDER BY date DESC`,
