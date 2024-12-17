@@ -38,30 +38,35 @@ export default function RootLayout({
               <Link
                 className="dark:hover:bg-rose-800 hover:bg-gray-200 pl-3 pt-2 pb-2 rounded-full text-nowrap sm:text-wrap"
                 href="/about-me"
+                prefetch={true}
               >
                 <h3>About Me 👋</h3>
               </Link>
               <Link
                 href="/professional-projects"
                 className="dark:hover:bg-rose-800 hover:bg-gray-200 pl-3 pt-2 pb-2 rounded-full text-nowrap sm:text-wrap"
+                prefetch={true}
               >
                 <h3>Professional Projects 🏢</h3>
               </Link>
               <Link
                 href="/personal-projects"
                 className="dark:hover:bg-rose-800 hover:bg-gray-200 pl-3 pt-2 pb-2 rounded-full text-nowrap sm:text-wrap"
+                prefetch={true}
               >
                 <h3>Personal Projects 💻</h3>
               </Link>
               <Link
                 href="/front-end"
                 className="dark:hover:bg-rose-800 hover:bg-gray-200 pl-3 pt-2 pb-2 rounded-full text-nowrap sm:text-wrap"
+                prefetch={true}
               >
                 <h3>Front End Work 🖼</h3>
               </Link>
               <Link
                 href="/back-end"
                 className="dark:hover:bg-rose-800 hover:bg-gray-200 pl-3 pt-2 pb-2 rounded-full text-nowrap sm:text-wrap"
+                prefetch={true}
               >
                 <h3>Back End Work 📊</h3>
               </Link>
