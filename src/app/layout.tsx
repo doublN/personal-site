@@ -24,10 +24,18 @@ export default function RootLayout({
             </Link>
             <div className="flex flex-row items-center gap-4">
               <h2 className="font-semibold">Software Developer</h2>
-              <a href="https://github.com/doublN" target="_blank">
+              <a
+                href="https://github.com/doublN"
+                target="_blank"
+                aria-label="github link"
+              >
                 <Icon name="github" size="small" />
               </a>
-              <a href="https://www.linkedin.com/in/nnewberry/" target="_blank">
+              <a
+                href="https://www.linkedin.com/in/nnewberry/"
+                target="_blank"
+                aria-label="linkedin link"
+              >
                 <Icon name="linkedIn" size="small" />
               </a>
             </div>

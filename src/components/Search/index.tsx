@@ -25,7 +25,10 @@ export function Search(props: Props) {
           name="search"
           className="text-black p-1 rounded-md w-full"
         ></input>
-        <button className="text-black ml-[-40px] hover:bg-slate-200 rounded-full">
+        <button
+          aria-label="search button"
+          className="text-black ml-[-40px] hover:bg-slate-200 rounded-full"
+        >
           <Icon name="search" size="small" />
         </button>
       </div>
