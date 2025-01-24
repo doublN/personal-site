@@ -14,16 +14,9 @@ export type ArticleLink = {
   url: string;
 };
 
-const client = createClient(
-  process.env.NODE_ENV === "development"
-    ? {
-        url: process.env.DB_CONNECTION ?? "",
-      }
-    : {
-        url: process.env.TURSO_DATABASE_URL ?? "",
-        authToken: process.env.TURSO_AUTH_TOKEN,
-      }
-);
+const client = createClient({
+  url: process.env.DB_CONNECTION ?? "",
+});
 
 export const getArticles = async (
   tags: Array<string>
