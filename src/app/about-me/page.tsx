@@ -45,10 +45,6 @@ export default function Home() {
       </p>
       <section className="mt-3">
         <h2>Recommendations</h2>
-        <p>
-          Recommendations from LinkedIn from I have recieved from people I have
-          worked with
-        </p>
         <div className="flex flex-col gap-2 mt-3">
           <em>
             Nathan combines the incredible ability of intuitive frontend
