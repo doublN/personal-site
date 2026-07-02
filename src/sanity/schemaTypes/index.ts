@@ -8,32 +8,18 @@ import logo from './documents/logo'
 import navigation from './documents/navigation'
 import page from './documents/page'
 import person from './documents/person'
+import project from './documents/project'
 import quote from './documents/quote'
 import redirect from './documents/redirect'
 import site from './documents/site'
+import tech from './documents/tech'
+import hero from './modules/hero'
 // modules
-import accordionList from './modules/accordion-list'
-import blogIndex from './modules/blog-index'
-import blogPostContent from './modules/blog-post-content'
-import blogPostList from './modules/blog-post-list'
-import breadcrumbs from './modules/breadcrumbs'
-import callout from './modules/callout'
-import cardList from './modules/card-list'
-import customHtml from './modules/custom-html'
-import formModule from './modules/form-module'
-import heroSplit from './modules/hero.split'
-import logoList from './modules/logo-list'
-import personList from './modules/person-list'
-import prose from './modules/prose'
 import quoteList from './modules/quote-list'
-import searchModule from './modules/search-module'
-import statList from './modules/stat-list'
-import stepList from './modules/step-list'
 // objects
 import cta from './objects/cta'
 import link from './objects/link'
 import linkList from './objects/link.list'
-import megamenu from './objects/megamenu'
 import metadata from './objects/metadata'
 import moduleAttributes from './objects/module-attributes'
 
@@ -46,6 +32,7 @@ export const schema: SchemaPluginOptions = {
 		globalModule,
 		blogPost,
 		redirect,
+		project,
 
 		// references
 		blogCategory,
@@ -53,33 +40,18 @@ export const schema: SchemaPluginOptions = {
 		navigation,
 		person,
 		quote,
+		tech,
 
 		// objects
 		cta,
 		link,
 		linkList,
-		megamenu,
 		metadata,
 		moduleAttributes,
 
 		// modules
-		accordionList,
-		blogIndex,
-		blogPostContent,
-		blogPostList,
-		breadcrumbs,
-		callout,
-		cardList,
-		customHtml,
-		formModule,
-		heroSplit,
-		logoList,
-		personList,
-		prose,
 		quoteList,
-		searchModule,
-		statList,
-		stepList,
+		hero,
 	],
 
 	templates: (templates) =>

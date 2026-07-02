@@ -18,18 +18,15 @@ export default structureTool({
 				S.documentTypeListItem('page').title('Pages').icon(DocumentIcon),
 				pageDirectoriesListItem(S, context),
 
-				S.divider().title('Blog'),
-				S.documentTypeListItem('blog.post').title('Posts'),
-				S.documentTypeListItem('blog.category').title('Categories'),
+				S.divider().title('Projects'),
+				S.documentTypeListItem('project').title('Projects').icon(DocumentIcon),
+				S.documentTypeListItem('tech').title('Tech'),
 
 				S.divider().title('Navigation'),
 				S.documentTypeListItem('navigation'),
 				S.documentTypeListItem('redirect').title('Redirects'),
 
 				S.divider().title('References'),
-				S.documentTypeListItem('form').title('Forms'),
-				S.documentTypeListItem('logo').title('Logos'),
-				S.documentTypeListItem('person').title('People'),
 				S.documentTypeListItem('quote').title('Quotes'),
 			]),
 })

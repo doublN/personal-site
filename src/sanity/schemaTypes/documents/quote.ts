@@ -14,29 +14,12 @@ export default defineType({
 			of: [{ type: 'block' }],
 		}),
 		defineField({
-			name: 'author',
-			type: 'object',
-			options: {
-				columns: 2,
-			},
-			fields: [
-				defineField({
-					name: 'name',
-					type: 'string',
-				}),
-				defineField({
-					name: 'title',
-					type: 'string',
-				}),
-				defineField({
-					name: 'image',
-					type: 'image',
-					options: {
-						hotspot: true,
-						metadata: ['lqip'],
-					},
-				}),
-			],
+			name: 'name',
+			type: 'string',
+		}),
+		defineField({
+			name: 'link',
+			type: 'url',
 		}),
 	],
 	preview: {

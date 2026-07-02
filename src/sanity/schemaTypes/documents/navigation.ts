@@ -28,7 +28,7 @@ export default defineType({
 		defineField({
 			name: 'items',
 			type: 'array',
-			of: [{ type: 'link' }, { type: 'link.list' }, { type: 'megamenu' }],
+			of: [{ type: 'link' }, { type: 'link.list' }],
 		}),
 	],
 	preview: {
