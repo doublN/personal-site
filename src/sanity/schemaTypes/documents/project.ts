@@ -7,6 +7,10 @@ export default defineType({
 	type: 'document',
 	fields: [
 		defineField({
+			name: 'date',
+			type: 'date',
+		}),
+		defineField({
 			name: 'title',
 			type: 'string',
 		}),

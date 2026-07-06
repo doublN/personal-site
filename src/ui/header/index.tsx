@@ -13,7 +13,7 @@ export default async function () {
 
 	return (
 		<Wrapper className="sticky top-0 z-10">
-			<div className={cn(css.root, 'section flex items-center gap-x-4 py-4')}>
+			<div className={cn(css.root, 'section flex items-center gap-x-8 py-4')}>
 				<div className="just between flex items-center gap-4 [grid-area:top]">
 					<Logo className="grow has-[img]:-my-2 has-[img]:h-[2lh]" />
 					<MobileToggle />

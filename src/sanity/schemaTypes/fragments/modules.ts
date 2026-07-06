@@ -4,7 +4,14 @@ export default ({ of = [] }: { of?: Array<{ type: string }> } = {}) =>
 	defineField({
 		name: 'modules',
 		type: 'array',
-		of: [{ type: 'quote-list' }, { type: 'hero' }, ...of],
+		of: [
+			{ type: 'quote-list' },
+			{ type: 'hero' },
+			{ type: 'icon-carousel' },
+			{ type: 'about-section' },
+			{ type: 'projects-section' },
+			...of,
+		],
 		options: {
 			insertMenu: {
 				filter: true,

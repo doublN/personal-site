@@ -5,42 +5,18 @@ import type {
 	ModuleAttributes,
 	PAGE_QUERY_RESULT,
 } from '@/sanity/types'
-import AccordionList from './accordion-list'
-import BlogIndex from './blog/blog-index'
-import BlogPostContent from './blog/blog-post-content'
-import BlogPostList from './blog/blog-post-list'
-import Breadcrumbs from './breadcrumbs'
-import Callout from './callout'
-import CardList from './card-list'
-import CustomHTML from './custom-html'
-import FormModule from './form-module'
-import HeroSplit from './hero.split'
-import LogoList from './logo-list'
-import PersonList from './person-list'
-import Prose from './prose'
+import AboutSection from './about-section'
+import Hero from './hero'
+import IconCarousel from './icon-carousel'
+import ProjectsSection from './projects-section'
 import QuoteList from './quote-list'
-import SearchModule from './search'
-import StatList from './stat-list'
-import StepList from './step-list'
 
 const MODULES_MAP = {
-	'accordion-list': AccordionList,
-	'blog-index': BlogIndex,
-	'blog-post-content': BlogPostContent,
-	'blog-post-list': BlogPostList,
-	breadcrumbs: Breadcrumbs,
-	callout: Callout,
-	'card-list': CardList,
-	'custom-html': CustomHTML,
-	'form-module': FormModule,
-	'hero.split': HeroSplit,
-	'logo-list': LogoList,
-	'person-list': PersonList,
-	prose: Prose,
 	'quote-list': QuoteList,
-	'search-module': SearchModule,
-	'stat-list': StatList,
-	'step-list': StepList,
+	hero: Hero,
+	'icon-carousel': IconCarousel,
+	'about-section': AboutSection,
+	'projects-section': ProjectsSection,
 } as const
 
 export default function ({

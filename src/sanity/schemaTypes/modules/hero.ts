@@ -15,5 +15,21 @@ export default defineType({
 			type: 'string',
 			validation: (Rule) => Rule.required(),
 		}),
+		defineField({
+			name: 'content',
+			type: 'array',
+			of: [{ type: 'block' }],
+		}),
 	],
+	preview: {
+		select: {
+			title: 'title',
+		},
+		prepare({ title }) {
+			return {
+				title,
+				subtitle: 'Hero',
+			}
+		},
+	},
 })

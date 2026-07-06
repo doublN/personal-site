@@ -13,7 +13,10 @@ import quote from './documents/quote'
 import redirect from './documents/redirect'
 import site from './documents/site'
 import tech from './documents/tech'
+import aboutSection from './modules/about-section'
 import hero from './modules/hero'
+import iconCarousel from './modules/icon-carousel'
+import projectsSection from './modules/projects-section'
 // modules
 import quoteList from './modules/quote-list'
 // objects
@@ -52,6 +55,9 @@ export const schema: SchemaPluginOptions = {
 		// modules
 		quoteList,
 		hero,
+		iconCarousel,
+		aboutSection,
+		projectsSection,
 	],
 
 	templates: (templates) =>

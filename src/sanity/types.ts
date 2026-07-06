@@ -1,5 +1,27 @@
 // Query TypeMap
 import '@sanity/client'
+import { PortableTextBlock } from 'sanity'
+
+export type Tech = {
+	_type?: 'tech'
+	_id?: string
+	title?: string
+	slug?: {
+		_type?: 'slug'
+		current?: string
+	}
+}
+
+export type Project = {
+	_type?: 'project'
+	_id?: string
+	title: string
+	content: PortableTextBlock[]
+	date: string
+	screenshots?: SanityImage[]
+	link?: string
+	tech?: Tech[]
+}
 
 /**
  * ---------------------------------------------------------------------------------
@@ -23,6 +45,15 @@ export type SanityImageAssetReference = {
 	_type: 'reference'
 	_weak?: boolean
 	[internalGroqTypeReferenceTo]?: 'sanity.imageAsset'
+}
+
+export type SanityImage = {
+	asset?: SanityImageAssetReference
+	media?: unknown // Unable to locate the referenced type "image.media" in schema
+	hotspot?: SanityImageHotspot
+	crop?: SanityImageCrop
+	alt?: string
+	_type: 'image'
 }
 
 export type CardImage = {

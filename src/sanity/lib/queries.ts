@@ -110,6 +110,31 @@ export const MODULES_QUERY = groq`
 	_type == 'quote-list' => {
 		quotes[]->
 	},
+
+	_type == 'icon-carousel' => {
+		icons[]->{
+			_id,
+			slug,
+			title
+		}
+	},
+
+	_type == 'projects-section' => {
+		...,
+		projects[]->{
+			_id,
+			title,
+			date,
+			tech[]->{
+				_id,
+				title,
+				slug
+			},
+			content[],
+			screenshots[],
+			link
+		}
+	}
 `
 
 /* queries */

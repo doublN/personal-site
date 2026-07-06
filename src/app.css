@@ -3,7 +3,7 @@
 @theme {
 	--font-sans: 'Arimo', sans-serif;
 
-	--color-background: #291824;
+	--color-background: #1d142a;
 	--color-foreground: #f3f3f3;
 
 	--spacing-lh: 1lh;
@@ -53,7 +53,6 @@
 
 	html {
 		scroll-behavior: smooth;
-		@apply accent-primary caret-primary;
 	}
 
 	details {
@@ -139,7 +138,7 @@
 }
 
 @utility action-outline {
-	@apply action-base bg-background border-stroke text-foreground border hover:border-current;
+	@apply action-base text-foreground rounded-md! border border-purple-500!;
 }
 
 @utility ghost {
@@ -147,7 +146,7 @@
 }
 
 @utility link {
-	@apply text-primary cursor-pointer underline hover:decoration-2;
+	@apply cursor-pointer underline hover:decoration-2;
 }
 
 @utility input {
@@ -206,7 +205,7 @@
 	}
 
 	& blockquote {
-		@apply border-stroke border-l-4 pl-4;
+		@apply border-l-4 pl-4;
 	}
 
 	& :not(pre) > code {
@@ -374,4 +373,18 @@
 
 @utility anim-fade-to-b {
 	@apply anim-fade starting:-translate-y-4;
+}
+
+.embla__viewport {
+	overflow: hidden;
+}
+
+.embla__container {
+	display: flex;
+	touch-action: pan-y pinch-zoom;
+}
+
+.embla__slide {
+	flex: 0 0 100%;
+	min-width: 0;
 }
