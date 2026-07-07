@@ -12,17 +12,17 @@ export default function IconCarousel({
 	if (!icons || icons.length === 0) return null
 
 	return (
-		<div className="section pt-6!">
+		<div className="section my-4! md:pt-6!">
 			<Marquee
 				gradient
 				gradientColor={'var(--color-background)'}
 				gradientWidth={50}
 				pauseOnHover
-				className="h-36"
+				className="md:h-36"
 			>
 				{icons.map((icon) => (
 					<div
-						className="group relative mx-4 flex size-18 flex-col items-center transition-all hover:scale-120 hover:cursor-pointer"
+						className="group relative mx-4 flex size-12 flex-col items-center transition-all hover:scale-120 hover:cursor-pointer md:size-18"
 						key={icon._id}
 					>
 						<TechIcon slug={icon.slug?.current} title={icon.title} />

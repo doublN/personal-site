@@ -11,7 +11,7 @@ export default async function Hero({
 	content: PortableTextBlock[]
 }) {
 	return (
-		<section className="section my-12 flex flex-col items-center justify-center">
+		<section className="section flex flex-col items-center justify-center md:my-12">
 			<div className="text-center">
 				<h1 className="h1 text-[50px]">{title}</h1>
 				<h2 className="h2">{subtitle}</h2>
