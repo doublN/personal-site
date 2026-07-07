@@ -15,7 +15,7 @@ export default function ProjectCard({ project }: { project: Project }) {
 	const { setImage } = useFullScreenImage()
 
 	return (
-		<div className="space-y-4 rounded-md border border-purple-500 p-6">
+		<div className="bg-background/90 space-y-4 rounded-md border-3 border-purple-500 p-6 drop-shadow drop-shadow-pink-400">
 			<div className="flex items-center gap-4">
 				<h2 className="h2">{project.title}</h2>
 				{project.link && (
