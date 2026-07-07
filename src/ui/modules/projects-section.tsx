@@ -1,13 +1,10 @@
 'use client'
 
 import useEmblaCarousel from 'embla-carousel-react'
-import { PortableText } from 'next-sanity'
 import Link from 'next/link'
 import { FaChevronLeft, FaChevronRight, FaLink } from 'react-icons/fa6'
 import { Project } from '@/sanity/types'
-import Img from '../img'
 import ProjectCard from '../project-card'
-import TechIcon from '../tech-icon'
 
 export default function ProjectsSection({
 	title,

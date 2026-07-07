@@ -5,12 +5,14 @@ import Link from 'next/link'
 import { useState } from 'react'
 import { FaLink } from 'react-icons/fa6'
 import { cn } from '@/lib/utils'
-import { Project } from '@/sanity/types'
+import { useFullScreenImage } from '@/providers/full-screen-image-provider'
+import { Project, SanityImage } from '@/sanity/types'
 import Img from './img'
 import TechIcon from './tech-icon'
 
 export default function ProjectCard({ project }: { project: Project }) {
 	const [showMore, setShowMore] = useState(false)
+	const { setImage } = useFullScreenImage()
 
 	return (
 		<div className="space-y-4 rounded-md border border-purple-500 p-6">
@@ -42,9 +44,15 @@ export default function ProjectCard({ project }: { project: Project }) {
 				</div>
 			)}
 			{project.screenshots && project.screenshots.length > 0 && (
-				<div>
-					{project.screenshots.map((image) => (
-						<Img image={image} alt={image.alt ?? 'Website screenshot'} />
+				<div className="flex gap-6 max-md:flex-col">
+					{project.screenshots.map((image, i) => (
+						<button
+							key={image.alt ?? i}
+							className="transition-all hover:scale-105 hover:cursor-pointer"
+							onClick={() => setImage(image)}
+						>
+							<Img image={image} alt={image.alt ?? 'Website screenshot'} />
+						</button>
 					))}
 				</div>
 			)}

@@ -4,6 +4,7 @@ import { preconnect } from 'react-dom'
 import Header from '@/ui/header'
 import VisualEditing from '@/ui/modules/visual-editing'
 import '@/app.css'
+import { FullScreenImageProvider } from '@/providers/full-screen-image-provider'
 
 const fontSans = Arimo({
 	subsets: ['latin'],
@@ -24,11 +25,13 @@ export default async function RootLayout({
 			className={fontSans.className}
 		>
 			<NuqsAdapter>
-				<body className="bg-background text-foreground antialiased">
-					<Header />
-					<main>{children}</main>
+				<body className="bg-background text-foreground relative antialiased">
+					<FullScreenImageProvider>
+						<Header />
+						<main>{children}</main>
 
-					<VisualEditing />
+						<VisualEditing />
+					</FullScreenImageProvider>
 				</body>
 			</NuqsAdapter>
 		</html>

@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { JSX } from 'react/jsx-runtime'
 import AwsIcon from './icons/aws-icon'
 import CssIcon from './icons/css-icon'
@@ -48,5 +49,13 @@ export default function TechIcon({
 		['sql', <SqlIcon />],
 	])
 
-	return iconMap.get(slug) || <span className="w-fit">{title}</span>
+	return (
+		<Link
+			href={`/projects?tech=${slug}`}
+			className="group text-foreground relative"
+			style={{ width: 'inherit', height: 'inherit' }}
+		>
+			{iconMap.get(slug) || <span className="w-fit">{title}</span>}
+		</Link>
+	)
 }
