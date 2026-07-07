@@ -12,7 +12,7 @@ export default function IconCarousel({
 	if (!icons || icons.length === 0) return null
 
 	return (
-		<div className="section">
+		<div className="section pt-6!">
 			<Marquee
 				gradient
 				gradientColor={'var(--color-background)'}
