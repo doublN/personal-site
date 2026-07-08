@@ -43,11 +43,11 @@ export default function ProjectsSection({
 				</button>
 			</div>
 			<div className="mt-4 flex justify-end">
-				<div className="h-px w-[28px]" />
+				<div className="h-px w-[34px]" />
 				<Link href="/projects" className="action-outline">
 					See more
 				</Link>
-				<div className="h-px w-[28px]" />
+				<div className="h-px w-[34px]" />
 			</div>
 		</div>
 	)
