@@ -1,3 +1,5 @@
+import Link from 'next/link'
+import { FiDownload } from 'react-icons/fi'
 import { cn } from '@/lib/utils'
 import { getSite } from '@/sanity/lib/queries'
 import type { LinkList, Megamenu as MegamenuType } from '@/sanity/types'
@@ -50,6 +52,17 @@ export default async function () {
 						return null
 				}
 			})}
+			{site?.cv && (
+				<Link
+					href={site.cv.asset.url}
+					download
+					className="action-outline mt-2 md:hidden"
+					target="_blank"
+				>
+					<FiDownload />
+					CV
+				</Link>
+			)}
 		</nav>
 	)
 }

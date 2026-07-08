@@ -1205,6 +1205,11 @@ export type Site = {
 	_updatedAt: string
 	_rev: string
 	title?: string
+	cv?: {
+		asset: {
+			url: string
+		}
+	}
 	logo?: {
 		title?: string
 		image?: {
@@ -5084,6 +5089,11 @@ export type SITE_QUERY_RESULT = {
 	_updatedAt: string
 	_rev: string
 	title?: string
+	cv?: {
+		asset: {
+			url: string
+		}
+	}
 	logo?: {
 		title?: string
 		image?: {

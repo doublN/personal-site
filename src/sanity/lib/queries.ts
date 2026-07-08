@@ -49,6 +49,12 @@ const SITE_QUERY = groq`*[_type == 'site'][0]{
 	},
 	footer->{ ${NAVIGATION_QUERY} },
 	social->{ ${NAVIGATION_QUERY} },
+	cv{
+		asset->{
+			url
+		}
+	}
+		
 }`
 
 export const GLOBAL_MODULE_EXCLUDE_QUERY = groq`

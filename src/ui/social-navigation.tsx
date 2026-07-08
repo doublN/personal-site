@@ -32,11 +32,11 @@ export default async function (props: React.ComponentProps<'nav'>) {
 								{url?.includes('facebook.com') ? (
 									<FaFacebook />
 								) : url?.includes('github.com') ? (
-									<FaGithub />
+									<FaGithub size={20} />
 								) : url?.includes('instagram.com') ? (
 									<FaInstagram />
 								) : url?.includes('linkedin.com') ? (
-									<FaLinkedinIn />
+									<FaLinkedinIn size={20} />
 								) : url?.includes('tiktok.com') ? (
 									<FaTiktok />
 								) : url?.includes('twitter.com') || url?.includes('x.com') ? (

@@ -35,6 +35,11 @@ export default defineType({
 			group: 'navigation',
 		}),
 		defineField({
+			name: 'cv',
+			type: 'file',
+			group: 'navigation',
+		}),
+		defineField({
 			name: 'ctas',
 			title: 'Call-to-actions',
 			type: 'array',
