@@ -54,7 +54,7 @@ export default function TechIcon({
 	return (
 		<Link
 			href={`/projects?tech=${_id}`}
-			className="group text-foreground relative"
+			className="group text-foreground relative flex items-center justify-center"
 			style={{ width: 'inherit', height: 'inherit' }}
 		>
 			{iconMap.get(slug) || <span className="w-fit">{title}</span>}

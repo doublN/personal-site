@@ -16,6 +16,9 @@
 @variant header-open (body:has(#header-open:checked) &);
 @variant header-not-open (body:has(#header-open:not(:checked)) &);
 
+@variant tech-open (body:has(#tech-open:checked) &);
+@variant tech-not-open (body:has(#tech-open:not(:checked)) &);
+
 @variant headings (& :is(h1, h2, h3, h4, h5, h6));
 
 @layer base {

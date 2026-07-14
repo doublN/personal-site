@@ -1,6 +1,7 @@
 'use client'
 
-import { useState, useTransition } from 'react'
+import { usePathname } from 'next/navigation'
+import { useEffect, useState, useTransition } from 'react'
 import { ImSpinner2 } from 'react-icons/im'
 import getProjects from '@/actions/getProjects'
 import { Project } from '@/sanity/types'
@@ -18,8 +19,10 @@ export default function ProjectListClient({
 	techId: string
 }) {
 	const [projects, setProjects] = useState(initProjects)
-	const [isPending, startTransition] = useTransition()
 	const [page, setPage] = useState(1)
+
+	const [isPending, startTransition] = useTransition()
+	const pathname = usePathname()
 
 	const getMoreProjects = async () => {
 		await startTransition(async () => {
@@ -28,6 +31,13 @@ export default function ProjectListClient({
 			setProjects([...projects, ...newProjects])
 		})
 	}
+
+	useEffect(() => {
+		if (typeof document === 'undefined') return
+
+		const techFilter = document.querySelector('#tech-open') as HTMLInputElement
+		if (techFilter) techFilter.checked = false
+	}, [pathname])
 
 	return (
 		<div>

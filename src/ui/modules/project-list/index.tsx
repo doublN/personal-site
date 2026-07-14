@@ -3,6 +3,7 @@ import getProjects from '@/actions/getProjects'
 import getProjectsCount from '@/actions/getProjectsCount'
 import ProjectListClient from './project-list-client'
 import ProjectListFallback from './project-list-fallback'
+import TechFilterList from './tech-filter-list'
 
 export default async function ProjectList({
 	size = 5,
@@ -16,6 +17,7 @@ export default async function ProjectList({
 
 	return (
 		<div className="section">
+			<TechFilterList />
 			<Suspense key={tech} fallback={<ProjectListFallback />}>
 				<ProjectListClient
 					initProjects={initProjects}
