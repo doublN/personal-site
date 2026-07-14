@@ -8,6 +8,7 @@ import type {
 import AboutSection from './about-section'
 import Hero from './hero'
 import IconCarousel from './icon-carousel'
+import ProjectList from './project-list'
 import ProjectsSection from './projects-section'
 import QuoteList from './quote-list'
 
@@ -17,14 +18,17 @@ const MODULES_MAP = {
 	'icon-carousel': IconCarousel,
 	'about-section': AboutSection,
 	'projects-section': ProjectsSection,
+	'project-list': ProjectList,
 } as const
 
 export default function ({
 	page,
 	post,
+	searchParams,
 }: {
 	page?: PAGE_QUERY_RESULT
 	post?: BLOG_POST_QUERY_RESULT
+	searchParams?: { [key: string]: string | string[] | undefined }
 }) {
 	const modules = [page, post].flatMap((item) => item?.modules ?? [])
 
@@ -54,6 +58,7 @@ export default function ({
 					<Component
 						{...module}
 						{...moduleSpecificProps(module)}
+						{...searchParams}
 						key={module._key}
 					/>
 				)

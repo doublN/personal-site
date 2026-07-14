@@ -12,7 +12,7 @@ export default async function Hero({
 }) {
 	return (
 		<section className="section flex flex-col items-center justify-center md:my-12">
-			<div className="text-center">
+			<div className="space-y-2 text-center">
 				<h1 className="h1 text-[50px]">{title}</h1>
 				<h2 className="h2">{subtitle}</h2>
 			</div>

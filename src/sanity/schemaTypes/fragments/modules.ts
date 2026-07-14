@@ -10,6 +10,7 @@ export default ({ of = [] }: { of?: Array<{ type: string }> } = {}) =>
 			{ type: 'icon-carousel' },
 			{ type: 'about-section' },
 			{ type: 'projects-section' },
+			{ type: 'project-list' },
 			...of,
 		],
 		options: {

@@ -15,7 +15,7 @@ export default function ProjectCard({ project }: { project: Project }) {
 	const { setImage } = useFullScreenImage()
 
 	return (
-		<div className="bg-background/90 space-y-4 rounded-md border-3 border-purple-500 p-6 drop-shadow drop-shadow-pink-400">
+		<div className="bg-background-light space-y-4 rounded-md border-3 border-purple-500 p-6">
 			<div className="flex items-center gap-4">
 				<h2 className="h2">{project.title}</h2>
 				{project.link && (
@@ -27,7 +27,11 @@ export default function ProjectCard({ project }: { project: Project }) {
 			<div className="flex flex-wrap items-center gap-4">
 				{project.tech?.map((item) => (
 					<div key={item._id} className="size-8">
-						<TechIcon slug={item?.slug?.current} title={item.title} />
+						<TechIcon
+							_id={item._id}
+							slug={item?.slug?.current}
+							title={item.title}
+						/>
 					</div>
 				))}
 			</div>

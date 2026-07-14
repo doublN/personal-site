@@ -21,9 +21,11 @@ import TailwindIcon from './icons/tailwind-icon'
 import TypescriptIcon from './icons/typescript-icon'
 
 export default function TechIcon({
+	_id = '',
 	slug = '',
 	title = '',
 }: {
+	_id?: string
 	slug?: string
 	title?: string
 }) {
@@ -51,7 +53,7 @@ export default function TechIcon({
 
 	return (
 		<Link
-			href={`/projects?tech=${slug}`}
+			href={`/projects?tech=${_id}`}
 			className="group text-foreground relative"
 			style={{ width: 'inherit', height: 'inherit' }}
 		>

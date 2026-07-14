@@ -16,6 +16,7 @@ import tech from './documents/tech'
 import aboutSection from './modules/about-section'
 import hero from './modules/hero'
 import iconCarousel from './modules/icon-carousel'
+import projectList from './modules/project-list'
 import projectsSection from './modules/projects-section'
 // modules
 import quoteList from './modules/quote-list'
@@ -58,6 +59,7 @@ export const schema: SchemaPluginOptions = {
 		iconCarousel,
 		aboutSection,
 		projectsSection,
+		projectList,
 	],
 
 	templates: (templates) =>

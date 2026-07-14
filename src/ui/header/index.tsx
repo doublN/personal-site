@@ -13,7 +13,7 @@ import Wrapper from './wrapper'
 
 export default async function () {
 	const site = await getSite()
-	console.log(site)
+
 	return (
 		<Wrapper className="max-md:header-open:h-screen max-md:header-open:w-screen max-md:header-open:fixed sticky top-0 z-10 bg-[#090114]">
 			<div

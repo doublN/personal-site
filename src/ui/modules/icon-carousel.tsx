@@ -25,7 +25,11 @@ export default function IconCarousel({
 						className="group relative mx-4 flex size-12 flex-col items-center transition-all hover:scale-120 hover:cursor-pointer md:size-18"
 						key={icon._id}
 					>
-						<TechIcon slug={icon.slug?.current} title={icon.title} />
+						<TechIcon
+							_id={icon._id}
+							slug={icon.slug?.current}
+							title={icon.title}
+						/>
 					</div>
 				))}
 			</Marquee>

@@ -17,14 +17,16 @@ import ModulesResolver from '@/ui/modules'
 
 type Props = {
 	params: Promise<{ slug?: string[] }>
+	searchParams: Promise<{ [key: string]: string | string[] | undefined }>
 }
 
-export default async function Page({ params }: Props) {
+export default async function Page({ params, searchParams }: Props) {
 	const { slug } = await params
+	const resolvedSearchParams = await searchParams
 	const page = await getPage(slug)
 	if (!page) notFound()
 
-	return <ModulesResolver page={page} />
+	return <ModulesResolver page={page} searchParams={resolvedSearchParams} />
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
