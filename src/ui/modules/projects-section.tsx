@@ -2,7 +2,7 @@
 
 import useEmblaCarousel from 'embla-carousel-react'
 import Link from 'next/link'
-import { FaChevronLeft, FaChevronRight, FaLink } from 'react-icons/fa6'
+import { FaChevronLeft, FaChevronRight } from 'react-icons/fa6'
 import { Project } from '@/sanity/types'
 import ProjectCard from '../project-card'
 
