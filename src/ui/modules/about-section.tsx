@@ -1,6 +1,7 @@
 import { PortableTextBlock } from 'sanity'
 import { PortableText } from 'next-sanity'
 import { SanityImage } from '@/sanity/types'
+import Card from '../Card'
 import Img from '../img'
 
 export default function AboutSection({
@@ -13,9 +14,11 @@ export default function AboutSection({
 	image: SanityImage
 }>) {
 	return (
-		<section className="section">
-			<h2>{title}</h2>
-			<PortableText value={content} />
+		<section className="section flex items-start gap-8">
+			<Card className="w-full">
+				<h2 className="h2">{title}</h2>
+				<PortableText value={content} />
+			</Card>
 			{image && <Img image={image} alt={image.alt ?? 'about image'} />}
 		</section>
 	)
