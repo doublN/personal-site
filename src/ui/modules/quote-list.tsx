@@ -1,9 +1,11 @@
+import { PortableTextBlock } from 'sanity'
 import { PortableText, stegaClean } from 'next-sanity'
 import { cn } from '@/lib/utils'
 import type { Quote, QuoteList } from '@/sanity/types'
 import Eyebrow from '@/ui/eyebrow'
 import Img from '@/ui/img'
 import { Module } from '.'
+import Card from '../Card'
 
 export default function ({
 	eyebrow,
@@ -13,14 +15,16 @@ export default function ({
 	columns,
 	_key,
 	...props
-}: QuoteList & { _key: string }) {
+}: Omit<QuoteList & { _key: string }, 'quotes'> & {
+	quotes: Array<{ quote: PortableTextBlock[]; name: string; link: string }>
+}) {
 	const layout = stegaClean(l)
 
 	return (
 		<Module _key={_key} className="section space-y-8" {...props}>
 			{(eyebrow || intro) && (
-				<header className="prose text-center">
-					<Eyebrow value={eyebrow} />
+				<header className="">
+					<h1 className="h1">{eyebrow}</h1>
 					<PortableText value={intro} />
 				</header>
 			)}
@@ -41,32 +45,32 @@ export default function ({
 				data-anchor-name={`--quote-list-${_key}`}
 			>
 				{(quotes as unknown as Quote[])?.map((quote) => (
-					<article
-						className="border-stroke bg-background flex flex-col gap-4 border p-4 md:snap-start"
-						key={quote._id}
-					>
+					<Card key={quote._id}>
 						<blockquote className="prose grow">
 							<PortableText value={quote.quote} />
 						</blockquote>
 
-						{quote.author?.name && (
-							<cite className="flex items-center gap-2">
-								<Img
-									className="aspect-square size-[2lh] shrink-0 rounded-full object-cover"
-									image={quote.author?.image}
-									width={48}
-									alt={quote.author?.name}
-								/>
-
+						{quote.name && (
+							<cite>
 								<dl>
-									<dt>{quote.author.name}</dt>
-									{quote.author?.title && (
-										<dd className="text-sm">{quote.author?.title}</dd>
-									)}
+									<dt>
+										&#x2014;{' '}
+										{quote.link ? (
+											<a
+												className="link text-white"
+												target="_blank"
+												href={`${quote.link}`}
+											>
+												{quote.name}
+											</a>
+										) : (
+											quote.name
+										)}
+									</dt>
 								</dl>
 							</cite>
 						)}
-					</article>
+					</Card>
 				))}
 			</div>
 		</Module>

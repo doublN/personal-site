@@ -25,12 +25,11 @@ export default defineType({
 	preview: {
 		select: {
 			quote: 'quote',
-			author: 'author',
+			author: 'name',
 		},
 		prepare: ({ quote, author }) => ({
 			title: [author?.name, author?.title].filter(Boolean).join(' / '),
 			subtitle: getBlockText(quote),
-			media: author?.image?.asset,
 		}),
 	},
 })

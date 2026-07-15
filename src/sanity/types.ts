@@ -808,17 +808,10 @@ export type Quote = {
 		_type: 'block'
 		_key: string
 	}>
-	author?: {
-		name?: string
-		title?: string
-		image?: {
-			asset?: SanityImageAssetReference
-			media?: unknown
-			hotspot?: SanityImageHotspot
-			crop?: SanityImageCrop
-			_type: 'image'
-		}
-	}
+
+	name?: string
+	title?: string
+	link?: string
 }
 
 export type SanityImageCrop = {
