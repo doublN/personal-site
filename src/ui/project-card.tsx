@@ -7,6 +7,7 @@ import { FaLink } from 'react-icons/fa6'
 import { cn } from '@/lib/utils'
 import { useFullScreenImage } from '@/providers/full-screen-image-provider'
 import { Project, SanityImage } from '@/sanity/types'
+import Card from './Card'
 import Img from './img'
 import TechIcon from './tech-icon'
 
@@ -15,7 +16,7 @@ export default function ProjectCard({ project }: { project: Project }) {
 	const { setImage } = useFullScreenImage()
 
 	return (
-		<div className="bg-background-light space-y-4 rounded-md border-3 border-purple-500 p-6">
+		<Card>
 			<div className="flex items-center gap-4">
 				<h2 className="h2">{project.title}</h2>
 				{project.link && (
@@ -60,6 +61,6 @@ export default function ProjectCard({ project }: { project: Project }) {
 					))}
 				</div>
 			)}
-		</div>
+		</Card>
 	)
 }

@@ -17,7 +17,9 @@ export default async function ProjectList({
 
 	return (
 		<div className="section">
-			<TechFilterList />
+			<div className="mb-8">
+				<TechFilterList />
+			</div>
 			<Suspense key={tech} fallback={<ProjectListFallback />}>
 				<ProjectListClient
 					initProjects={initProjects}

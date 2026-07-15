@@ -1,12 +1,13 @@
 import { FaChevronDown } from 'react-icons/fa6'
 import { getTech } from '@/actions/getTech'
+import Card from '@/ui/Card'
 import TechIcon from '@/ui/tech-icon'
 
 export default async function TechFilterList() {
 	const tech = await getTech()
 
 	return (
-		<div className="bg-background-light mb-8 space-y-4 rounded-md border-3 border-purple-500 p-6">
+		<Card>
 			<label className="mb-0 flex w-full items-center justify-between">
 				<input id="tech-open" type="checkbox" hidden />
 				<h3 className="h3">Filter Tech</h3>
@@ -26,6 +27,6 @@ export default async function TechFilterList() {
 					</div>
 				))}
 			</div>
-		</div>
+		</Card>
 	)
 }
