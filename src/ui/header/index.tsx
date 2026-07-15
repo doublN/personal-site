@@ -19,13 +19,13 @@ export default async function () {
 			<div
 				className={cn(
 					css.root,
-					'section max-md:header-open:flex-col max-md:header-open:items-start flex items-center gap-x-8 py-4',
+					'section max-md:header-open:flex-col max-md:header-open:items-start flex items-center gap-x-12 py-4',
 				)}
 			>
 				<div className="flex items-center justify-between gap-4 [grid-area:top] max-md:w-full">
-					<Logo className="w-50 has-[img]:-my-2 has-[img]:h-[2lh]" />
-					<div className="flex shrink items-center gap-4">
-						<SocialNavigation className="flex items-center gap-4 md:hidden" />
+					<Logo className="w-fit text-nowrap has-[img]:-my-2 has-[img]:h-[2lh]" />
+					<div className="flex shrink items-center gap-4 md:hidden">
+						<SocialNavigation className="flex items-center gap-4" />
 						<MobileToggle />
 					</div>
 				</div>
