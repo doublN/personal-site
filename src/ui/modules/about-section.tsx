@@ -14,7 +14,7 @@ export default function AboutSection({
 	image: SanityImage
 }>) {
 	return (
-		<section className="section flex items-start gap-8">
+		<section className="section flex gap-8 max-md:flex-col md:items-start">
 			<Card className="w-full">
 				<h2 className="h2">{title}</h2>
 				<PortableText value={content} />
