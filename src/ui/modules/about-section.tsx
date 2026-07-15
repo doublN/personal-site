@@ -17,7 +17,9 @@ export default function AboutSection({
 		<section className="section flex gap-8 max-md:flex-col md:items-start">
 			<Card className="w-full">
 				<h2 className="h2">{title}</h2>
-				<PortableText value={content} />
+				<div className="[&>p>a]:link space-y-2 [&>p>a]:text-white">
+					<PortableText value={content} />
+				</div>
 			</Card>
 			{image && <Img image={image} alt={image.alt ?? 'about image'} />}
 		</section>
